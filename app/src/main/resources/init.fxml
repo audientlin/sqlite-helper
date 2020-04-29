@@ -1,0 +1,42 @@
+<?import javafx.scene.layout.VBox?><?import javafx.scene.layout.BorderPane?><?import javafx.scene.text.Text?><?import javafx.geometry.Insets?><?import javafx.scene.control.TextField?><?import javafx.scene.control.Button?>
+<VBox fx:controller="com.audient.sqlitehelper.page.InitController" xmlns:fx="http://javafx.com/fxml" prefWidth="600" spacing="5">
+    <BorderPane>
+        <padding>
+            <Insets topRightBottomLeft="10" />
+        </padding>
+
+        <center>
+            <VBox spacing="5">
+                <padding>
+                    <Insets right="5" />
+                </padding>
+
+                <Text text="开发环境相关配置" styleClass="lead, text-danger" />
+                <TextField fx:id="tfDevelUrl" styleClass="lead" promptText="请输入MQTT链接，如：" />
+                <TextField fx:id="tfDevelUsername" styleClass="lead" promptText="请输入MQTT用户名，如：admin" />
+                <TextField fx:id="tfDevelPassword" styleClass="lead" promptText="请输入MQTT密码：如：password" />
+                <Button onAction="#onBtnDevelControlClick" text="开发环境" styleClass="lead, btn-primary" prefWidth="Infinity" />
+            </VBox>
+        </center>
+    </BorderPane>
+
+    <BorderPane>
+        <padding>
+            <Insets topRightBottomLeft="10" />
+        </padding>
+
+        <center>
+            <VBox spacing="5">
+                <padding>
+                    <Insets right="5" />
+                </padding>
+
+                <Text text="生产环境相关配置" styleClass="lead, text-danger" />
+                <TextField fx:id="tfProductlUrl" styleClass="lead" promptText="请输入MQTT链接，如：" />
+                <TextField fx:id="tfProductUsername" styleClass="lead" promptText="请输入MQTT用户名，如：admin" />
+                <TextField fx:id="tfProductPassword" styleClass="lead" promptText="请输入MQTT密码：如：password" />
+                <Button onAction="#onBtnProductControlClick" text="生产环境" styleClass="lead, btn-primary" prefWidth="Infinity" />
+            </VBox>
+        </center>
+    </BorderPane>
+</VBox>

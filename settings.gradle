@@ -1,0 +1,18 @@
+// 插件管理，文档：https://docs.gradle.org/6.0.1/userguide/plugins.html#sec:plugin_management
+pluginManagement {
+    repositories {
+        // 在build.gradle中配置的plugins中的插件，默认是从https://plugins.gradle.org/下载
+        // 配置了下面的仓库，则会按顺序从上往下查找下载
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/central/" }
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter/" }
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        google()
+        jcenter()
+        mavenCentral()
+        gradlePluginPortal()// gradle默认的仓库
+    }
+}
+
+rootProject.name = 'sqlite-helper'
+
+include ("app")

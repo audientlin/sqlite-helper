@@ -1,0 +1,14 @@
+allprojects {
+    repositories {
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/central/" }
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter/" }
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+repositories {
+    mavenCentral()
+}
